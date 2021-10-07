@@ -42,9 +42,18 @@ namespace project
             this.Tml = new System.Windows.Forms.TextBox();
             this.Tphno = new System.Windows.Forms.TextBox();
             this.CreBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Tage = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +131,7 @@ namespace project
             this.Tbd.Name = "Tbd";
             this.Tbd.Size = new System.Drawing.Size(100, 20);
             this.Tbd.TabIndex = 8;
+            this.Tbd.Leave += new System.EventHandler(this.Tbd_Leave);
             // 
             // Tgen
             // 
@@ -147,28 +157,19 @@ namespace project
             // 
             // CreBtn
             // 
-            this.CreBtn.Location = new System.Drawing.Point(41, 243);
+            this.CreBtn.Location = new System.Drawing.Point(112, 312);
             this.CreBtn.Name = "CreBtn";
-            this.CreBtn.Size = new System.Drawing.Size(75, 23);
+            this.CreBtn.Size = new System.Drawing.Size(115, 45);
             this.CreBtn.TabIndex = 12;
             this.CreBtn.Text = "Create";
             this.CreBtn.UseVisualStyleBackColor = true;
             this.CreBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(140, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Read";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(342, 243);
+            this.button3.Location = new System.Drawing.Point(354, 312);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(115, 45);
             this.button3.TabIndex = 14;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
@@ -176,22 +177,88 @@ namespace project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(241, 243);
+            this.button4.Location = new System.Drawing.Point(233, 312);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(115, 45);
             this.button4.TabIndex = 15;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(233, 11);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(603, 266);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "First Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Last Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "DOB";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Email";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Phone No.";
+            this.Column6.Name = "Column6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 227);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Age";
+            // 
+            // Tage
+            // 
+            this.Tage.Location = new System.Drawing.Point(115, 220);
+            this.Tage.Name = "Tage";
+            this.Tage.Size = new System.Drawing.Size(100, 20);
+            this.Tage.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 532);
+            this.ClientSize = new System.Drawing.Size(860, 532);
+            this.Controls.Add(this.Tage);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.CreBtn);
             this.Controls.Add(this.Tphno);
             this.Controls.Add(this.Tml);
@@ -207,6 +274,8 @@ namespace project
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,9 +296,17 @@ namespace project
         private System.Windows.Forms.TextBox Tml;
         private System.Windows.Forms.TextBox Tphno;
         private System.Windows.Forms.Button CreBtn;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Tage;
     }
 }
 
